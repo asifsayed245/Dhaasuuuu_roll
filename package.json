@@ -1,0 +1,13 @@
+{
+  "name": "your-product-image-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "echo 'Static project - open public/index.html or deploy to Netlify'",
+    "build": "echo 'Static project - nothing to build'"
+  },
+  "dependencies": {
+    "replicate": "^1.0.0"
+  }
+}
