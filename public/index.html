@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ComfyUI on Replicate — Netlify</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ComfyUI on Replicate — Netlify</h1>
+      <p class="sub">Static frontend + Netlify Function backend (API key stays secret)</p>
+
+      <form id="gen-form">
+        <label for="prompt">Prompt</label>
+        <textarea id="prompt" rows="5">A dynamic, slightly angled shot of a paneer wrap, with the bottom half wrapped in a custom-branded paper, held firmly in hand against a stylish, slightly out-of-focus brick wall backdrop with subtle graffiti. Visible char marks on the exposed top half, with a generous, colorful filling spilling out. Use vibrant, contrasting colors for the wrap and ingredients. The lighting is sharp and focused, highlighting the texture and freshness, creating an energetic, 'grab-and-go' appeal.</textarea>
+
+        <details>
+          <summary>Advanced</summary>
+          <div class="grid">
+            <div>
+              <label for="negative">Negative prompt</label>
+              <input id="negative" placeholder="optional" value="blurry, low quality, simple, modern, vibrant colors." />
+            </div>
+            <div>
+              <label for="seed">Seed</label>
+              <input id="seed" type="number" placeholder="673853604296923" />
+            </div>
+            <div>
+              <label for="steps">Steps</label>
+              <input id="steps" type="number" placeholder="20" />
+            </div>
+            <div>
+              <label for="cfg">CFG</label>
+              <input id="cfg" type="number" step="0.1" placeholder="1" />
+            </div>
+            <div>
+              <label for="width">Width</label>
+              <input id="width" type="number" placeholder="1024" />
+            </div>
+            <div>
+              <label for="height">Height</label>
+              <input id="height" type="number" placeholder="1024" />
+            </div>
+          </div>
+        </details>
+
+        <button type="submit">Generate</button>
+      </form>
+
+      <div id="status"></div>
+      <div id="gallery" class="gallery"></div>
+      <pre id="logs" class="logs" hidden></pre>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
